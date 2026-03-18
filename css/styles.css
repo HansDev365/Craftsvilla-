@@ -1,0 +1,619 @@
+/* 
+   CraftsVilla Core Stylesheet
+   Design System: Organic, Craft-focused, Warm Palette
+   Typography: Fraunces (Variable Font)
+*/
+
+/* --- Typography Imports --- */
+
+/* Base font import: Fraunces regular - Handles weights 100-900 via variable font technology */
+@font-face {
+	font-family: 'Fraunces';
+	src: url('../Fraunces/Fraunces-VariableFont_SOFT,WONK,opsz,wght.ttf')
+		format('truetype-variations');
+	font-weight: 100 900;
+	font-style: normal;
+}
+
+/* Base font import: Fraunces italic - Matching variable font for slanted text */
+@font-face {
+	font-family: 'Fraunces';
+	src: url('../Fraunces/Fraunces-Italic-VariableFont_SOFT,WONK,opsz,wght.ttf')
+		format('truetype-variations');
+	font-weight: 100 900;
+	font-style: italic;
+}
+
+/* --- Design Tokens & Variables --- */
+:root {
+	--logo: #b15a35; /* Primary brand color (terracotta) */
+	--bg-color: #f6efe7; /* Soft cream background */
+	--text-primary: #24363d; /* Deep slate for readability */
+	--text-secondary: #6e7a7a; /* Muted teal-grey for subtext */
+	--accent-color: #2f7a6e; /* Deep forest green for contrast */
+	--border-color: #e6d5c3; /* Subtle sand-colored borders */
+	--card-bg: #f8f4ef; /* Slightly lighter cream for cards */
+	--input-bg: #f9f6f2; /* Very light off-white for form fields */
+	--container-width: 1180px; /* Standard content width */
+}
+
+/* --- Global Resets & Defaults --- */
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	font-family: 'Fraunces', serif;
+	/* Complex background: Blend of radial gradients to create an organic, dappled light effect */
+	background:
+		radial-gradient(
+			circle at 0% 5%,
+			rgba(232, 184, 150, 0.45) 0,
+			rgba(232, 184, 150, 0.45) 18%,
+			transparent 19%
+		),
+		radial-gradient(
+			circle at 95% 25%,
+			rgba(207, 218, 205, 0.65) 0,
+			rgba(207, 218, 205, 0.65) 12%,
+			transparent 13%
+		),
+		radial-gradient(
+			circle at 78% 88%,
+			rgba(239, 220, 190, 0.45) 0,
+			rgba(239, 220, 190, 0.45) 10%,
+			transparent 11%
+		),
+		linear-gradient(180deg, #f7f0e8 0%, #f4ede4 100%);
+	color: var(--text-primary);
+	line-height: 1.5;
+	-webkit-font-smoothing: antialiased; /* Font smoothing: Better font rendering on macOS, IOS */
+}
+
+/* --- Layout Utilities --- */
+
+/* Standard centered container with side padding for mobile safety */
+.container {
+	max-width: var(--container-width);
+	margin: 0 auto;
+	padding: 0 1.5rem;
+}
+
+/* Utilities */
+.text-center {
+	text-align: center;
+	padding-top: 1rem;
+	padding-bottom: 1rem;
+}
+
+.max-width-800 {
+	max-width: 800px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+/* Flex helper for section titles (e.g., "Popular workshop kits") */
+.container-popular {
+	display: flex;
+	justify-content: center;
+	font-size: 2rem;
+	margin-bottom: 2rem;
+}
+
+/* --- Navigation & Header --- */
+header {
+	padding: 1.5rem 0;
+}
+
+header .container {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	gap: 2rem;
+}
+
+/* Brand Identity */
+.logo {
+	display: flex;
+	flex-direction: column;
+	text-decoration: none;
+	color: var(--logo);
+}
+
+.logo-title {
+	font-size: 1.4rem;
+	font-weight: 800;
+	letter-spacing: 0.1em;
+	line-height: 1;
+}
+
+.logo-tagline {
+	font-size: 0.65rem;
+	font-weight: 500;
+	letter-spacing: 0.05em;
+	color: var(--text-secondary);
+	margin-top: 0.2rem;
+}
+
+/* Glassmorphism Navigation Capsule */
+.nav-pill {
+	display: flex;
+	align-items: center;
+	gap: 1rem;
+	padding: 0.75rem 0.9rem;
+	background: rgba(255, 255, 255, 0.55);
+	border: 1px solid rgba(230, 213, 195, 0.9);
+	border-radius: 999px;
+	box-shadow: 0 10px 30px rgba(80, 60, 40, 0.08);
+	backdrop-filter: blur(8px); /* Blur effect for "frosted glass" look */
+	-webkit-backdrop-filter: blur(8px);
+}
+
+nav ul {
+	display: flex;
+	list-style: none;
+	gap: 2.2rem;
+	margin: 0;
+	padding: 0 0.4rem;
+}
+
+nav a {
+	text-decoration: none;
+	color: var(--text-secondary);
+	font-size: 0.95rem;
+	font-weight: 500;
+	transition: color 0.2s ease;
+}
+
+nav a:hover,
+nav a.active {
+	color: var(--text-primary);
+}
+
+/* --- Global Button System --- */
+.btn {
+	display: inline-block;
+	padding: 0.7rem 1.45rem;
+	border-radius: 2rem;
+	text-decoration: none;
+	font-weight: 600;
+	font-size: 0.9rem;
+	transition: all 0.2s;
+	cursor: pointer;
+	border: 1px solid var(--accent-color);
+	font-family: inherit;
+}
+
+.btn-primary {
+	background-color: #d97a4a;
+	color: #fff;
+	border: none;
+}
+
+.btn-outline {
+	background-color: #f1e6d8;
+	color: #2f3e3e;
+	border: 1px solid #e6d5c3;
+}
+
+.btn-large {
+	padding: 0.85rem 1.6rem;
+	font-size: 0.98rem;
+}
+
+.btn:hover {
+	opacity: 0.8;
+	transform: translateY(-1px); /* Slight lift effect */
+}
+
+/* --- Hero & Section Headers --- */
+.hero,
+.page-header {
+	padding: 6rem 0;
+}
+
+h1 {
+	font-size: 4.5rem;
+	line-height: 1.1;
+	margin-bottom: 1rem;
+	font-weight: 700;
+}
+
+h2 {
+	font-size: 1.75rem;
+	font-weight: 400;
+	color: var(--text-secondary);
+	margin-bottom: 2rem;
+}
+
+.hero-copy {
+	font-size: 1rem;
+	color: var(--text-secondary);
+	max-width: 500px;
+	line-height: 1.5;
+}
+
+/* Hero Layout (Desktop) */
+.hero-layout {
+	display: grid;
+	grid-template-columns: 1.1fr 1fr;
+	gap: 3rem;
+	align-items: center;
+}
+
+/* Left Content Column */
+.hero-content {
+	display: flex;
+	flex-direction: column;
+	gap: 1.5rem;
+}
+
+.hero-badge {
+	display: inline-block;
+	background: #f1d2b6;
+	color: #9d4d2f;
+	font-size: 0.75rem;
+	padding: 0.4rem 0.8rem;
+	border-radius: 999px;
+	letter-spacing: 0.05em;
+	text-transform: uppercase;
+	width: fit-content;
+}
+
+/* Mini stat cards in hero */
+.subsection-row {
+	display: flex;
+	gap: 1rem;
+	margin-top: 0.5rem;
+}
+
+.subsection {
+	background: #f8f4ef;
+	border: 1px solid #e6d5c3;
+	border-radius: 1rem;
+	padding: 1rem 1.2rem;
+	min-width: 140px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+
+.subsection-label {
+	display: flex;
+	justify-content: center;
+	font-size: 0.75rem;
+	color: var(--text-secondary);
+	margin-bottom: 0.3rem;
+}
+
+.subsection-number {
+	display: flex;
+	justify-content: center;
+	font-size: 2rem;
+	font-weight: 600;
+}
+
+.subsection-text {
+	font-size: 0.95rem;
+	padding-bottom: 20%;
+}
+
+/* --- Hero Visual Card (Right Column) --- */
+.hero-card {
+	background: #f8f4ef;
+	border-radius: 1.5rem;
+	padding: 1.5rem;
+	box-shadow: 0 20px 50px rgba(0, 0, 0, 0.08);
+}
+
+/* Bento-style grid for showcase images */
+.hero-card-grid {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	grid-template-rows: 120px 100px auto;
+	gap: 1rem;
+}
+
+.hero-block {
+	border-radius: 1rem;
+}
+
+.hero-block--tall {
+	grid-row: span 2;
+	background: url('../img/canvas1.jpg');
+	background-size: cover;
+	background-position: center;
+}
+
+.hero-block--green {
+	background: url('../img/mosaic2.jpg');
+	background-size: cover;
+	background-position: center;
+}
+
+.hero-block--sand {
+	background: url('../img/water2.jpg');
+	background-size: cover;
+	background-position: center;
+	border: 1px dashed #d3bfa7;
+}
+
+.hero-card-copy h3 {
+	font-size: 1.2rem;
+	margin-top: 0.3rem;
+}
+
+.hero-dropin {
+	background: #efe2d2;
+	border-radius: 1rem;
+	padding: 1rem;
+}
+
+.eyebrow {
+	font-size: 0.7rem;
+	letter-spacing: 0.05em;
+	color: var(--text-secondary);
+	text-transform: uppercase;
+}
+
+/* --- Section Enhancements (Our Mission) --- */
+
+.mission-highlight {
+	background: var(--card-bg);
+	border: 1px solid var(--border-color);
+	border-radius: 2rem;
+	padding: 4rem 2rem;
+	margin-top: 2rem;
+	box-shadow: 0 5px 20px var(--accent-color);
+}
+
+.benefit-card-impact {
+	background: white;
+	border: 1px solid var(--border-color);
+}
+
+.benefit-card-impact h4 {
+	color: var(--accent-color);
+	margin-bottom: 0.5rem;
+}
+
+/* --- Reusable Components (Cards, Grids, Forms) --- */
+
+.section-padding {
+	padding-bottom: 5rem;
+	padding-left: 0;
+	padding-right: 0;
+}
+
+/* Standard Grids */
+.grid-3 {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	gap: 3rem;
+}
+
+.grid-2 {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	gap: 4rem;
+}
+
+/* Polaroid/Product Cards */
+.card {
+	padding: 2rem;
+	border-radius: 1rem;
+	background: var(--card-bg);
+}
+
+div.polaroid {
+	width: 80%;
+	background-color: white;
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+	margin-bottom: 25px;
+}
+
+/* Hover Cards (Used in Booking) */
+.hover-card {
+	position: relative;
+	display: block;
+	border-radius: 1rem;
+	overflow: hidden;
+	transition: transform 0.3s ease;
+}
+
+.hover-card--full {
+	width: 100%;
+	height: 220px;
+}
+
+.hover-card img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	transition: opacity 0.5s ease;
+}
+
+.hover-overlay {
+	position: absolute;
+	inset: 0;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background: rgba(0, 0, 0, 0.45);
+	opacity: 0;
+	transition: opacity 0.5s ease;
+	color: white;
+	padding: 1rem;
+}
+
+.hover-card:hover img {
+	opacity: 0.35;
+}
+
+.hover-card:hover .hover-overlay {
+	opacity: 1;
+}
+
+/* Forms Styling */
+.form-group {
+	margin-bottom: 1.5rem;
+}
+
+label {
+	display: block;
+	font-size: 0.8rem;
+	text-transform: uppercase;
+	color: var(--text-secondary);
+	margin-bottom: 0.5rem;
+	font-weight: 600;
+}
+
+input,
+select,
+textarea {
+	width: 100%;
+	padding: 0.8rem;
+	background: var(--input-bg);
+	border: 1px solid var(--border-color);
+	border-radius: 0.4rem;
+	font-family: inherit;
+	font-size: 1rem;
+}
+
+/* --- Gallery Grid --- */
+.gallery-grid {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	gap: 1rem;
+}
+
+.gallery-item {
+	position: relative;
+	aspect-ratio: 1/1;
+	border-radius: 0.5rem;
+	overflow: hidden;
+}
+
+.gallery-item img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+
+/* Caption with gradient overlay for readability */
+.center-gallery {
+	position: absolute;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	padding: 1.25rem 1rem 0.9rem;
+	color: #fff;
+	text-align: center;
+	background: linear-gradient(to top, rgba(0, 0, 0, 0.72), rgba(0, 0, 0, 0));
+}
+
+.gallery-item.wide {
+	grid-column: span 2;
+}
+
+/* --- Footer --- */
+footer {
+	padding: 4rem 0;
+	border-top: 1px solid var(--border-color);
+	font-size: 0.9rem;
+}
+
+footer .container {
+	display: flex;
+	justify-content: space-between;
+	color: var(--text-secondary);
+}
+
+footer a {
+	color: var(--logo);
+	text-decoration: none;
+	margin-right: 1.5rem;
+}
+
+/* --- Booking Form  --- */
+
+/* 
+   This section handles the "Success" state of the booking form without using any JavaScript.
+   When the form is "submitted" to #confirmation, the :target pseudo-class triggers.
+*/
+
+.confirmation-section {
+	display: none; /* Hidden by default */
+	text-align: center;
+	padding: 2rem 0;
+}
+
+/* When the URL contains #confirmation (e.g., after "submitting" the form) */
+#confirmation:target {
+	display: block;
+}
+
+/* Hide the form container when the confirmation is active (using adjacent sibling selector) */
+#confirmation:target + #booking-form-container {
+	display: none;
+}
+
+/* --- Responsive Media Queries --- */
+
+/* Tablet & Smaller Laptops */
+@media (max-width: 900px) {
+	.hero-layout {
+		grid-template-columns: 1fr;
+	}
+	.hero-card {
+		margin-top: 2rem;
+	}
+}
+
+/* Mobile Devices */
+@media (max-width: 768px) {
+	h1 {
+		font-size: 2.5rem;
+	}
+	.subsection-row {
+		flex-direction: column;
+	}
+	.grid-3,
+	.grid-2,
+	.gallery-grid {
+		grid-template-columns: 1fr;
+	}
+
+	.gallery-item.wide {
+		grid-column: span 1; /* Reset wide items on mobile */
+	}
+
+	.hero-card-grid {
+		grid-template-columns: 1fr;
+		grid-template-rows: repeat(3, 150px) auto;
+	}
+
+	.hero-block--tall {
+		grid-row: span 1;
+	}
+
+	header .container {
+		flex-direction: column;
+		gap: 1.5rem;
+	}
+
+	nav ul {
+		gap: 1rem;
+		flex-wrap: wrap;
+		justify-content: center;
+	}
+
+	.nav-pill {
+		flex-direction: column;
+		border-radius: 1.5rem;
+		padding: 1rem;
+		width: 100%;
+	}
+}

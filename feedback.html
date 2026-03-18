@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feedback | CraftsVilla</title>
+    <!-- Shared stylesheet for global design consistency -->
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+    <!-- Top navigation area: Unified across all pages -->
+    <header>
+        <div class="container">
+            <div class="logo">
+                <span class="logo-title">CRAFTSVILLA</span>
+                <span class="logo-tagline">Create. Connect. Unwind.</span>
+            </div>
+
+            <div class="nav-pill">
+                <nav>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="booking.html">Booking</a></li>
+                        <li><a href="gallery.html">Gallery</a></li>
+                        <li><a href="feedback.html" class="active">Feedback</a></li>
+                    </ul>
+                </nav>
+                <a href="booking.html" class="btn btn-primary">Book workshop</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Feedback Page Content -->
+    <main>
+        <!-- Page introduction: Sets a welcoming tone for reviews -->
+        <div class="page-header">
+            <div class="container">
+                <h1>Feedback</h1>
+                <p style="font-size: 1.5rem; color: var(--text-secondary)">We would love to hear about your workshop
+                    experience.</p>
+            </div>
+        </div>
+
+        <!-- 
+            Two-column Layout:
+            Left: The active feedback collection form.
+            Right: Social proof through existing testimonials.
+        -->
+        <div class="container section-padding">
+            <div class="grid-2">
+                <!-- Submission Form Column -->
+                <div class="card">
+                    <h3 style="margin-bottom: 2rem">Share review</h3>
+                    <form>
+                        <div class="form-group">
+                            <label>Name</label>
+                            <input type="text" placeholder="Your name" required>
+                        </div>
+                        <div class="form-group">
+                            <label>Workshop</label>
+                            <select>
+                                <option>Watercolor</option>
+                                <option>Mosaic</option>
+                                <option>Canvas</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label>Favorite moment</label>
+                            <!-- Multi-line text area for descriptive feedback -->
+                            <textarea placeholder="Tell us about the favorite part of your workshop..."
+                                rows="4"></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-block" style="width: 100%; padding: 1rem">Send
+                            feedback</button>
+                    </form>
+                </div>
+
+                <!-- Testimonials Column (Social Proof) -->
+                <div>
+                    <h3 style="margin-bottom: 2rem">Recommended testimonials</h3>
+                    <!-- Individual Testimonial Card 1 -->
+                    <div class="card" style="margin-bottom: 1rem">
+                        <p style="font-style: italic; margin-bottom: 1rem">“Relaxed, friendly and surprisingly calming.
+                            We would come again for the watercolor set.”</p>
+                        <p><strong>Maja & her daughter</strong></p>
+                    </div>
+                    <!-- Individual Testimonial Card 2 -->
+                    <div class="card">
+                        <p style="font-style: italic; margin-bottom: 1rem">“The host made the session easy for everyone,
+                            even complete beginners.”</p>
+                        <p><strong>Studio team event</strong></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Global Footer -->
+    <footer>
+        <div class="container">
+            <div>
+                <a href="#">craftsvilla.no</a>
+                <a href="mailto:hello@craftsvilla.no">hello@craftsvilla.no</a>
+            </div>
+            <div>Instagram / Facebook</div>
+        </div>
+    </footer>
+</body>
+
+</html>

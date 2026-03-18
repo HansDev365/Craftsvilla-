@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery | CraftsVilla</title>
+    <!-- Shared stylesheet for global design consistency -->
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+    <!-- Top navigation area: Reused across all pages -->
+    <header>
+        <div class="container">
+            <div class="logo">
+                <span class="logo-title">CRAFTSVILLA</span>
+                <span class="logo-tagline">Create. Connect. Unwind.</span>
+            </div>
+
+            <div class="nav-pill">
+                <nav>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="booking.html">Booking</a></li>
+                        <li><a href="gallery.html" class="active">Gallery</a></li>
+                        <li><a href="feedback.html">Feedback</a></li>
+                    </ul>
+                </nav>
+                <a href="booking.html" class="btn btn-primary">Book workshop</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Gallery content area -->
+    <main>
+        <!-- Page introduction: Defines the intent of this section -->
+        <section class="page-header">
+            <div class="container">
+                <h1>Gallery</h1>
+                <p style="font-size: 1.5rem; color: var(--text-secondary)">Moments, finished artwork and joyful workshop
+                    energy.</p>
+            </div>
+        </section>
+
+        <!-- 
+            Gallery Grid: 
+            Uses a custom layout with "wide" items that span two columns on desktop 
+            and collapse to a single column on mobile.
+        -->
+        <div class="container section-padding">
+            <div class="gallery-grid">
+                <!-- Item 1: Featured wide artwork showcase -->
+                <div class="gallery-item wide">
+                    <img src="img/gallery1.png" alt="Close-up of handmade watercolor artwork">
+                    <h3 class="center-gallery">Handmade watercolor artwork</h3>
+                </div>
+                <!-- Item 2: Materials showcase -->
+                <div class="gallery-item">
+                    <img src="img/gallery3.png" alt="A collection of craft tools and raw materials">
+                    <h3 class="center-gallery">Craft tools and materials</h3>
+                </div>
+                <!-- Item 3: In-progress workshop photo -->
+                <div class="gallery-item">
+                    <img src="img/gallery2.png" alt="Paints spread out during a workshop session">
+                    <h3 class="center-gallery">Workshop paint spread</h3>
+                </div>
+                <!-- Item 4: Wide group interaction photo -->
+                <div class="gallery-item wide">
+                    <img src="img/gallery4.png" alt="A group of smiling people creating together at a table">
+                    <h3 class="center-gallery">Group of people creating together</h3>
+                </div>
+            </div>
+
+            <!-- Contextual CTA: Encourages conversion after browsing the gallery -->
+            <div class="text-center" style="margin-top: 2rem;">
+                <a href="booking.html" class="btn btn-primary btn-large">Book after viewing</a>
+            </div>
+        </div>
+    </main>
+
+    <!-- Global Footer -->
+    <footer>
+        <div class="container">
+            <div>
+                <a href="#">craftsvilla.no</a>
+                <a href="mailto:hello@craftsvilla.no">hello@craftsvilla.no</a>
+            </div>
+            <div>Instagram / Facebook</div>
+        </div>
+    </footer>
+</body>
+
+</html>

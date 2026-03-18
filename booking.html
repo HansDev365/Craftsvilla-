@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Booking | CraftsVilla</title>
+    <!-- Shared stylesheet for global styles and responsiveness -->
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+    <!-- Top navigation area: Unified header across all pages -->
+    <header>
+        <div class="container">
+            <div class="logo">
+                <span class="logo-title">CRAFTSVILLA</span>
+                <span class="logo-tagline">Create. Connect. Unwind.</span>
+            </div>
+
+            <div class="nav-pill">
+                <nav>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="booking.html" class="active">Booking</a></li>
+                        <li><a href="gallery.html">Gallery</a></li>
+                        <li><a href="feedback.html">Feedback</a></li>
+                    </ul>
+                </nav>
+                <a href="booking.html" class="btn btn-primary">Book workshop</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Booking Content -->
+    <main>
+        <!-- Page Header: Simple introduction for the booking process -->
+        <div class="page-header">
+            <div class="container">
+                <h1>Booking</h1>
+                <p style="font-size: 1.5rem; color: var(--text-secondary)">Choose a workshop and reserve your creative
+                    time.</p>
+            </div>
+        </div>
+
+        <!-- 
+            Grid Layout:
+            Left Column: Visual workshop options with hover effects.
+            Right Column: Reservation form.
+        -->
+        <div class="container section-padding">
+            <div class="grid-2">
+                <!-- Workshop Selection (Visual Column) -->
+                <div>
+                    <h2 class="text-center">Choose a workshop</h2>
+
+                    <!-- Mosaic Option -->
+                    <h4 class="text-center">Mosaic art</h4>
+                    <div class="workshop hover-card hover-card--full">
+                        <img src="img/mosaic.png" alt="Mosaic art materials">
+
+                        <!-- Hover Overlay: Reveals details on mouseover (Desktop) or tap (Mobile) -->
+                        <div class="hover-overlay">
+                            <div>
+                                <div class="hover-text">Textured workshop with frame, A4 board, stones and glue.</div>
+                                <span class="price">400 NOK</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Watercolor Option -->
+                    <h4 class="text-center">Watercolor painting</h4>
+                    <div class="workshop hover-card hover-card--full">
+                        <img src="img/water.jpg" alt="Watercolor painting setup">
+                        <div class="hover-overlay">
+                            <div>
+                                <div class="hover-text">Gentle, guided painting with template paper and brushes.</div>
+                                <span class="price">200 NOK</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Canvas Option -->
+                    <h4 class="text-center">Canvas painting</h4>
+                    <div class="workshop hover-card hover-card--full">
+                        <img src="img/canvas.jpg" alt="Canvas painting board">
+                        <div class="hover-overlay">
+                            <div>
+                                <div class="hover-text">Acrylic sheet, paints and brushes.</div>
+                                <span class="price">300 NOK</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Reservation Form (Input Column) -->
+                <div class="card">
+
+                    <!-- Confirmation Message (Shown when URL ends in #confirmation) -->
+                    <div id="confirmation" class="confirmation-section">
+                        <div style="font-size: 3rem; margin-bottom: 1rem;">✨</div>
+                        <h3 style="margin-bottom: 1rem; color: var(--accent-color);">Booking Received!</h3>
+                        <p style="color: var(--text-secondary); line-height: 1.6;">
+                            Thank you for booking with CRAFTSVILLA! We’ll get in touch with you shortly to confirm your
+                            spot.
+                        </p>
+                        <a href="booking.html" class="btn btn-outline"
+                            style="margin-top: 2rem; text-decoration: none; display: inline-block;">Make another
+                            booking</a>
+                    </div>
+
+                    <!-- Form Container (Hidden when URL ends in #confirmation) -->
+                    <div id="booking-form-container">
+                        <h3 style="margin-bottom: 2rem">Reservation form</h3>
+                        <form id="reservation-form" action="#confirmation">
+                            <!-- Full Name -->
+                            <div class="form-group">
+                                <label for="name">Full name</label>
+                                <input type="text" id="name" name="name" placeholder="Your name" required>
+                            </div>
+                            <!-- Email -->
+                            <div class="form-group">
+                                <label for="email">Email</label>
+                                <input type="email" id="email" name="email" placeholder="you@example.com" required>
+                            </div>
+                            <!-- Phone Number -->
+                            <div class="form-group">
+                                <label for="phone">Phone number</label>
+                                <input type="tel" id="phone" name="phone" placeholder="+47 000 00 000" required>
+                            </div>
+                            <!-- Workshop Selection -->
+                            <div class="form-group">
+                                <label for="workshop">Workshop selection</label>
+                                <select id="workshop" name="workshop" required>
+                                    <option value="" disabled selected>Select a workshop</option>
+                                    <option value="mosaic">Mosaic art</option>
+                                    <option value="watercolor">Watercolor painting</option>
+                                    <option value="canvas">Canvas painting</option>
+                                </select>
+                            </div>
+                            <!-- Preferred Date and Time -->
+                            <div class="form-group">
+                                <label for="datetime">Preferred date and time</label>
+                                <input type="datetime-local" id="datetime" name="datetime" required>
+                            </div>
+                            <!-- Number of Participants -->
+                            <div class="form-group">
+                                <label for="participants">Number of participants</label>
+                                <input type="number" id="participants" name="participants" min="1" max="20" value="1"
+                                    required>
+                            </div>
+                            <!-- Special Requests (Optional) -->
+                            <div class="form-group">
+                                <label for="requests">Special requests (optional)</label>
+                                <textarea id="requests" name="requests"
+                                    placeholder="Any dietary needs or special occasions?" rows="3"></textarea>
+                            </div>
+                            <!-- Submit Button -->
+                            <button type="submit" class="btn btn-primary btn-block"
+                                style="width: 100%; padding: 1rem">Submit booking</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Global Footer -->
+    <footer>
+        <div class="container">
+            <div>
+                <a href="#">craftsvilla.no</a>
+                <a href="mailto:hello@craftsvilla.no">hello@craftsvilla.no</a>
+            </div>
+            <div>Instagram / Facebook</div>
+        </div>
+    </footer>
+</body>
+
+</html>

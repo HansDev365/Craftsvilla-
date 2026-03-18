@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CraftsVilla | Create. Connect. Unwind.</title>
+    <!-- 
+        Shared stylesheet: Contains all design tokens, layout rules, 
+        and responsive media queries used across the entire site.
+    -->
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+    <!-- 
+        Site Header: Shared across all pages.
+        Includes branding (logo) and the primary navigation pill.
+    -->
+    <header>
+        <div class="container">
+            <!-- Brand Identity -->
+            <div class="logo">
+                <span class="logo-title">CRAFTSVILLA</span>
+                <span class="logo-tagline">Create. Connect. Unwind.</span>
+            </div>
+
+            <!-- Navigation Pill: Uses glassmorphism styling defined in CSS -->
+            <div class="nav-pill">
+                <nav>
+                    <ul>
+                        <li><a href="index.html" class="active">Home</a></li>
+                        <li><a href="booking.html">Booking</a></li>
+                        <li><a href="gallery.html">Gallery</a></li>
+                        <li><a href="feedback.html">Feedback</a></li>
+                    </ul>
+                </nav>
+                <!-- Primary Call to Action -->
+                <a href="booking.html" class="btn btn-primary">Book workshop</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Page Content -->
+    <main>
+        <!-- 
+            Hero Section: Split into two columns on desktop.
+            Left: Value proposition, CTA, and quick stats.
+            Right: Visual showcase card (Bento grid).
+        -->
+        <section class="hero">
+            <div class="container hero-layout">
+                <!-- Left Column: Copy & Actions -->
+                <div class="hero-content">
+                    <div class="hero-badge">Creative workshops for every age</div>
+
+                    <h1>Unleash your creativity, connect with others, and relax together.</h1>
+
+                    <p class="hero-copy">
+                        Hands-on mosaic, watercolor and canvas sessions designed for families,
+                        friends and teams who want more meaningful free time.
+                    </p>
+
+                    <!-- Secondary CTAs -->
+                    <div class="btn-upper">
+                        <a href="booking.html" class="btn btn-primary btn-large">Reserve a workshop</a>
+                        <a href="gallery.html" class="btn btn-outline btn-large">See gallery</a>
+                    </div>
+
+                    <!-- Trust/Scale Indicators -->
+                    <div class="subsection-row">
+                        <div class="subsection">
+                            <span class="subsection-label">Workshops</span>
+                            <span class="subsection-number">3</span>
+                        </div>
+
+                        <div class="subsection">
+                            <span class="subsection-label">Good for</span>
+                            <span class="subsection-text">Families + teams</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right Column: Visual Showcase -->
+                <div class="hero-card">
+                    <!-- 
+                        Bento Grid: Images are applied as CSS background-images 
+                        to .hero-block classes for better scaling control.
+                    -->
+                    <div class="hero-card-grid">
+                        <div class="hero-block hero-block--tall"></div>
+                        <div class="hero-block hero-block--green"></div>
+                        <div class="hero-block hero-block--sand"></div>
+
+                        <!-- Mini info block within the grid -->
+                        <div class="hero-card-copy">
+                            <p class="eyebrow">This week at CraftsVilla</p>
+                            <h3>Mosaic, watercolor and canvas kits ready to go</h3>
+                        </div>
+
+                        <!-- Next Event highlight -->
+                        <div class="hero-dropin">
+                            <p class="eyebrow">Next drop-in</p>
+                            <h3>Saturday<br />13:00</h3>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 
+            Our Mission & Benefits:
+            Provides context about the CRAFTSVILLA experience.
+            Uses utility classes for centering and a grid for key value points.
+        -->
+        <section class="section-padding">
+            <div class="container text-center">
+                <!-- Highlighted mission area -->
+                <div class="mission-highlight">
+                    <div class="max-width-800">
+                        <h2>Our mission</h2>
+                        <p class="hero-copy" style="margin: 0 auto 2rem; font-size: 1.2rem;">
+                            CRAFTSVILLA brings people together through the power of creativity. From parents bonding with kids to friends discovering new hobbies or coworkers relaxing after a long day – we provide joyful, guided art experiences for all.
+                        </p>
+                    </div>
+
+                    <h3 class="container-popular"> Why people love our workshops</h3>
+                    
+                    <div class="grid-2">
+                        <!-- Benefit 1 -->
+                        <div class="card benefit-card-impact">
+                            <h4>🎨 No experience needed</h4>
+                            <p>Just come as you are — we guide you every step of the way.</p>
+                        </div>
+                        <!-- Benefit 2 -->
+                        <div class="card benefit-card-impact">
+                            <h4>🧰 All materials included</h4>
+                            <p>Everything is ready for you, so you can focus on creating.</p>
+                        </div>
+                        <!-- Benefit 3 -->
+                        <div class="card benefit-card-impact">
+                            <h4>👨‍👩‍👧‍👦 Perfect for everyone</h4>
+                            <p>Families, friends, teams — all ages welcome here.</p>
+                        </div>
+                        <!-- Benefit 4 -->
+                        <div class="card benefit-card-impact">
+                            <h4>🌿 Relax, create, and recharge</h4>
+                            <p>A calm, feel-good experience that leaves you inspired.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- 
+            Product Showcase: Featured workshop kits.
+            Uses a 3-column grid layout with polaroid-style image treatments.
+        -->
+        <section class="section-padding">
+            <div class="container">
+                <h3 class="container-popular">Popular workshop kits</h3>
+                <div class="grid-3">
+
+                    <!-- Mosaic Kit -->
+                    <div class="card">
+                        <div class="polaroid"></div>
+                        <img src="img/mosaic.png" alt="Mosaic art materials" height="255" style="width:100%">
+                        <div class="container-text">
+                            <h4>Mosaic art</h4>
+                            <p>Frame, A4 board, stones and glue.</p>
+                            <span class="price">400 NOK</span>
+                        </div>
+                    </div>
+
+                    <!-- Watercolor Kit -->
+                    <div class="card">
+                        <div class="polaroid"></div>
+                        <img src="img/water.jpg" alt="Watercolor painting set" height="255" style="width:100%">
+                        <div class="container-text">
+                            <h4>Watercolor</h4>
+                            <p>Template, paints, brushes and frame.</p>
+                            <span class="price">200 NOK</span>
+                        </div>
+                    </div>
+
+                    <!-- Canvas Kit -->
+                    <div class="card">
+                        <div class="polaroid"></div>
+                        <img src="img/canvas.jpg" alt="Canvas and acrylic paints" height="255" style="width:100%">
+                        <div class="container-text">
+                            <h4>Canvas painting</h4>
+                            <p>Acrylic sheet, paints and brushes.</p>
+                            <span class="price">300 NOK</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- 
+        Global Footer: Contact information and social handles.
+        Simplified layout with space-between positioning.
+    -->
+    <footer>
+        <div class="container">
+            <div>
+                <a href="#">craftsvilla.no</a>
+                <a href="mailto:hello@craftsvilla.no">hello@craftsvilla.no</a>
+            </div>
+            <div>Instagram / Facebook</div>
+        </div>
+    </footer>
+</body>
+
+</html>
