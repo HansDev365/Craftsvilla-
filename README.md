@@ -72,7 +72,7 @@ GitHub Pages:
 ## 📦 Repository
 
 GitHub Repo:
-[GitHub Repo link)]([https://hansdev365.github.io/Hero_section/](https://github.com/HansDev365/Craftsvilla-.git))
+]([https://hansdev365.github.io/Hero_section/](https://github.com/HansDev365/Craftsvilla-.git))
 
 ## Author
 
