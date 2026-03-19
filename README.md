@@ -67,12 +67,12 @@ Through this project, I practiced:
 ## 🚀 Live Demo
 
 GitHub Pages:
-[GitHub Pages link)](https://hansdev365.github.io/Hero_section/)
+[[[GitHub Pages link)](https://hansdev365.github.io/Craftsvilla-/)]
 
 ## 📦 Repository
 
 GitHub Repo:
-]([https://hansdev365.github.io/Hero_section/](https://github.com/HansDev365/Craftsvilla-.git))
+[([https://hansdev365.github.io/Hero_section/)](https://github.com/HansDev365/Craftsvilla-.git))
 
 ## Author
 
