@@ -64,11 +64,15 @@ Through this project, I practiced:
 - improving visual hierarchy and spacing
 - making a website more responsive and user-friendly
 
-## How to Run the Project
+## 🚀 Live Demo
 
-1. Download or clone the repository
-2. Open the project folder
-3. Open `index.html` in your browser
+GitHub Pages:
+[GitHub Pages link)](https://hansdev365.github.io/Hero_section/)
+
+## 📦 Repository
+
+GitHub Repo:
+[GitHub Repo link)]([https://hansdev365.github.io/Hero_section/](https://github.com/HansDev365/Craftsvilla-.git))
 
 ## Author
 
